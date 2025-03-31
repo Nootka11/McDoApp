@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+:root {
+  --my-drop-shadow: 0px -4px 4px  rgba(0, 0, 0, 0.25);
+  }
+
+.leaflet-container {
+    width: 100%;
+   /* height: 100%; /* Ajusta según tu necesidad */
+    margin: 0 auto;
+    border: 1px solid #ccc; /* Opcional, para ver los límites */
+  }
+
+  .box__search{
+    @apply  bg-[rgba(255,255,255,0.53)] absolute left-5 z-10 flex flex-col p-2 rounded text-sm backdrop-blur-[8px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)];
+    margin-top: 16px;
+    margin-left: 40px;
+    width: 270px;
+  }
+  .input__search{
+    @apply  rounded mr-4 border p-1 bg-white;
+    border-color: #7D7D7D;
+    width: 80%;
+  }
+  .btn__search{
+   
+    width: 26px;
+    height: 26px;
+    @apply  rounded-md shadow-orange-400;
+    background-color: #F0C900;
+  }
+  .btn__disabled{
+    @apply  bg-yellow-200;
+
+  }
+  .card{
+    @apply  bg-white absolute bottom-0 w-full  z-10 flex flex-col p-4 text-sm  ;
+    min-height: 57px;
+    border-radius: 16px 16px 0 0;
+    filter: drop-shadow(var(--my-drop-shadow));
+  }
+
+
+/* MAP leaftlet */
+.leaflet-top .leaflet-control{
+  margin-top: 16px !important;
+
+}
+.leaflet-touch .leaflet-bar {
+  border: none !important;
+}
+.leaflet-touch .leaflet-bar a:first-child, .leaflet-touch .leaflet-bar a:last-child{
+
+  line-height: 26px;
+  border-radius: 2px !important;
+  border-color: #7D7D7D !important;
+  border-bottom-color: #7D7D7D !important; 
+  border-width: 1px !important;
+
+ 
+}
+.leaflet-touch .leaflet-bar span{
+  font-size: 1rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+.leaflet-bar a:last-child{
+  border-bottom-width: 1px !important;
+  border-bottom-style:solid !important;
+}
+.leaflet-touch .leaflet-bar a:first-child{
+  margin-bottom: 5px;
+}
+
