@@ -18,7 +18,7 @@ export const citySearch = async (address) => {
                   },
                 })
                 
-                
+                // Filtre les résultats pour ne garder que les villes, villages ou towns.
                 const citySuggestion = data.filter( 
                   item =>  item.addresstype==="town" || item.addresstype ==="city" || item.addresstype === "village" 
                 );
@@ -27,7 +27,7 @@ export const citySearch = async (address) => {
               
                 
             } catch (err) {
-                console.log('Error al buscar la ciudad', err)
+                console.log('Erreur lors de la recherche de la ville.', err)
                 throw err; 
                
             }       
@@ -36,7 +36,7 @@ export const citySearch = async (address) => {
     export const searchMcDonaldsInCity = async (cityName, lat, lon) => {
         
                 try {
-                  const radius = 0.09; // Radio de búsqueda en grados
+                  const radius = 0.09; // Rayon de recherche en degrés
                   const minLon = lon - radius;
                   const maxLon = lon + radius;
                   const minLat = lat - radius;

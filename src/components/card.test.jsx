@@ -2,12 +2,8 @@ import { render, screen } from "@testing-library/react";
 import '@testing-library/jest-dom';
 import {  Provider } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
-//import store from './store.jsx';
 import {setSelectedRestaurant} from "./dataSlice.jsx"
-import Card from "./card.jsx"; // Ajusta la ruta según corresponda
-
-
-
+import Card from "./card.jsx"; 
 
 const createTestStore = (initialState = {}) => {
     return configureStore({
@@ -57,10 +53,10 @@ describe("Card Component", () => {
           };
           const customStore = createTestStore({
             address: {
-              selectedRestaurant, // Aquí se establece el restaurante seleccionado
+              selectedRestaurant, 
             },
           });
-          console.log('desde el TEST CS**************', selectedRestaurant)
+          
       
         render(
             <Provider store={customStore}>
