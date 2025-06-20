@@ -6,3 +6,5 @@
 - **Mise à jour de la carte** : La carte se centre sur la ville sélectionnée, et les restaurants MacDonald y sont affichés sous forme de marqueurs.
 - **Interactivité des marqueurs** : En cliquant sur un marqueur, une popup s’ouvre pour afficher l’adresse exacte du restaurant ainsi qu’un bouton "Sélectionner".
  - **Validation** : Lorsque l’utilisateur clique sur "Sélectionner", l’overlay affiche les détails du restaurant sélectionné et un bouton "Continuer".
+
+ ## https://mc-do-app.vercel.app/ ##
